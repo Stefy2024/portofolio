@@ -1,0 +1,98 @@
+@charset "UTF-8";
+/*
+Theme Name: Portofolio
+Theme URI: http://portofolio2.test/
+Author: Stef
+Author URI: http://portofolio2.test/
+Description: Thème pour le site Portofolio
+Version: 1.0
+Text Domain: portofolio
+*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+body {
+  font-family: "Noto Sans";
+}
+body h1 {
+  font-size: 150px;
+  font-style: italic;
+  font-weight: bold;
+}
+body h2 {
+  font-size: 66px;
+  font-style: italic;
+  font-weight: 400;
+}
+body h3 {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+body p {
+  font-family: "Ubuntu";
+  font-size: 14px;
+  font-weight: 300;
+}
+
+/*****************
+header
+********************/
+.nav_bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2%;
+  padding-left: 7%;
+  padding-right: 7%;
+}
+.nav_bar .logo_img {
+  width: 160px;
+  height: 160px;
+}
+.nav_bar #navigation ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  text-transform: uppercase;
+}
+.nav_bar #navigation ul li {
+  font-size: 16px;
+  padding-right: 40px;
+  text-align: center;
+}
+.nav_bar #navigation ul li a {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*****************
+front_page
+********************/
+@keyframes zoomIn {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2);
+  }
+}
+.zone_hero {
+  position: relative;
+}
+.zone_hero .img_hero {
+  width: 100%;
+  height: auto;
+}
+.zone_hero h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  animation: zoomIn 3s linear forwards;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,33 @@
+//animation du h1 dans la zone hero
+@keyframes zoomIn {
+    0% {
+      transform: translate(-50%, -50%) scale(0); // Commence à l'échelle normale
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1); // Augmente légèrement l'échelle à 50% de l'animation
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(2); // Reviens à l'échelle normale à la fin de l'animation
+    }
+  }
+
+
+.zone_hero {
+    position: relative; // Fait de .zone_hero le conteneur de positionnement pour .img_hero et h1
+  
+    .img_hero {
+      width: 100%; // l'image prend toute la largeur de .zone_hero
+      height: auto; // Ajuste la hauteur automatiquement
+    }
+  
+    h1 {
+      position: absolute; // Positionne h1 par rapport à .zone_hero
+      top: 50%; // Centre h1 verticalement
+      left: 50%; // Centre h1 horizontalement
+      transform: translate(-50%, -50%); // Ajuste la position de h1 pour qu'il soit parfaitement centré
+      color: white;
+      animation: zoomIn 3s linear forwards;
+
+    }
+  }
+  

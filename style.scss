@@ -1,0 +1,50 @@
+/*
+Theme Name: Portofolio
+Theme URI: http://portofolio2.test/
+Author: Stef
+Author URI: http://portofolio2.test/
+Description: Thème pour le site Portofolio
+Version: 1.0
+Text Domain: portofolio
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+body{
+    font-family: 'Noto Sans';
+
+    h1{
+        font-size:150px;
+        font-style: italic;
+        font-weight: bold;
+    }
+    h2{
+        font-size:66px;
+        font-style: italic;
+        font-weight: 400;
+    }
+    h3{
+        font-size:18px;
+        font-style: normal;
+        font-weight: 400;
+    }
+
+    p{
+        font-family: 'Ubuntu';
+        font-size:14px;
+        font-weight: 300;
+    }
+}
+
+/*****************
+header
+********************/
+@import 'scss/header.scss';
+
+
+/*****************
+front_page
+********************/
+@import 'scss/front-page.scss';
+

@@ -1,0 +1,35 @@
+
+.nav_bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2%;
+    padding-left: 7%;
+    padding-right: 7%;
+
+    .logo_img{
+        width:160px;
+        height: 160px;
+    }
+
+    #navigation{
+        ul{
+            display: flex;
+            flex-direction: row;
+            list-style-type: none;
+            text-transform: uppercase;
+            
+                li{
+                    font-size: 16px;
+                    padding-right: 40px;
+                    text-align: center;
+                        a{
+                        color: black;
+                        text-decoration: none;
+                        cursor: pointer;
+                        }
+                }
+        }
+}
+}
