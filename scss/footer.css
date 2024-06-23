@@ -1,0 +1,28 @@
+#navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 2%;
+}
+#navigation ul {
+  display: flex;
+  flex-direction: row;
+  text-transform: uppercase;
+}
+#navigation ul li {
+  list-style-type: none;
+  padding-right: 60px;
+}
+#navigation ul li a {
+  color: #5ad27b;
+  text-decoration: none;
+}
+#navigation ul li:hover a {
+  color: #226c3b;
+}
+#navigation .footer_text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+}/*# sourceMappingURL=footer.css.map */

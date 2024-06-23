@@ -23,6 +23,7 @@ echo "<img src='$image_choisie' class='img_hero' alt='Image aléatoire' />";
 
 
 <!--zone projet-->
+<h2>Mes différents Projets réalisés</h2>
 <div class="liste_projet">
 <?php
     //paramètres pour l'affichage des projets
@@ -31,7 +32,7 @@ $paramrequette= array(
     'posts_per_page' => 4, // Récupère tous les articles  de ce type et en affiche 4
 );
 $projets = new WP_Query($paramrequette);
-
+echo '<div class="projet-flex">';
 // Affiche les projets récupérés
 if ($projets->have_posts()) {
     
@@ -56,17 +57,26 @@ if ($projets->have_posts()) {
              $post_url = get_permalink($post->ID);
          
              // Affiche l'image avec un lien vers la publication correspondante (photo-publi ou lightbox)
-             
-                     echo wp_get_attachment_image($imgAccueil, 'large');
-                         echo '<div class="overlay">';
-                            echo '<a href="' . esc_url($post_url) . '" class="link_publi">';
+            echo '<div class="container-projet-accueil">';    
+                echo '<div class="image-container">';
+                    echo wp_get_attachment_image($imgAccueil, 'large');
+                
+            
+                    echo '<div class="overlay">';
+                        echo '<a href="' . esc_url($post_url) . '" class="link_publi">';
                             echo '<img class="img_publi" src="'.get_template_directory_uri().'/assets/images/lien_publi.png" alt="lien publication">';
-                            echo '</a>';
-                            echo '<p class="photo_reference">' . $titre . '</p>';
-                         echo '</div>';
+                        echo '</a>';
+                    echo '</div>';
+                echo '</div>';
+            
+                echo '<div class="title-container">';
+                    echo '<p class="photo_titre">' . $titre . '</p>';
+                echo '</div>';
+            echo '</div>';  
          }
     }
 }
+ echo '</div>';
 
 ?>
 </div>

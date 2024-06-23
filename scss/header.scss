@@ -5,8 +5,31 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2%;
-    padding-left: 7%;
-    padding-right: 7%;
+   // padding-left: 7%;
+   // padding-right: 7%;
+
+    .burger_menu {
+        display: none; // Le bouton est caché par défaut
+        cursor: pointer;
+        span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: black;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+    }
+
+    .close_icon {
+        display: none; // La croix est cachée par défaut
+        cursor: pointer;
+        font-size: 30px; // Taille de la croix
+        position: absolute; // Positionnement absolu pour placer la croix
+        top: 20px; // Position verticale
+        right: 20px; // Position horizontale
+    }
+
 
     .logo_img{
         width:160px;
@@ -14,6 +37,7 @@
     }
 
     #navigation{
+
         ul{
             display: flex;
             flex-direction: row;
@@ -25,7 +49,7 @@
                     padding-right: 40px;
                     text-align: center;
                         a{
-                        color: black;
+                        color:#5ad27b;
                         text-decoration: none;
                         cursor: pointer;
                         }

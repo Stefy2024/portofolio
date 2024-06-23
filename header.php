@@ -33,7 +33,7 @@
         </button>
 
          <!-- Icône de la croix pour fermer le menu -->
-        <div class="close_icon" aria-label="Fermer le menu" style="display: none;">
+        <div class="close_icon" aria-label="Fermer le menu">
             &times;
         </div>
     </div>

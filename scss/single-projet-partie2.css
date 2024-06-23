@@ -1,0 +1,37 @@
+.photo_next_prev {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+.photo_next_prev .nav-thumbnail {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-decoration: none;
+  color: #000000;
+  font-size: 25px;
+  margin-left: 30px;
+  min-height: 180px;
+  min-width: 180px;
+  margin-top: 2%;
+}
+.photo_next_prev .nav-thumbnail:nth-child(1) {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.photo_next_prev .nav-thumbnail:nth-child(1) img {
+  top: -20px;
+  position: absolute;
+  right: -96px;
+}
+.photo_next_prev .nav-thumbnail:nth-child(2) {
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.photo_next_prev .nav-thumbnail:nth-child(2) img {
+  top: -20px;
+  position: absolute;
+  left: -97px;
+}/*# sourceMappingURL=single-projet-partie2.css.map */

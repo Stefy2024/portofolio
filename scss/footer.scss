@@ -1,0 +1,35 @@
+//footer css
+
+#navigation{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin:2%;
+        ul{
+            display: flex;
+            flex-direction: row;
+            text-transform: uppercase;
+            li{
+                list-style-type: none;
+                padding-right: 60px;
+
+                a{
+                    color:#5ad27b;
+                    text-decoration: none;
+                    }
+
+                    &:hover{
+                        a{
+                            color:#226c3b;
+                        }
+                    }
+            }
+        }
+  
+    .footer_text{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+    }
+}

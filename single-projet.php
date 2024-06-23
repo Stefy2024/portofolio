@@ -19,24 +19,27 @@ $imgSecond = get_field('image_secondaire');
 $descriProjet = get_field('description_projet');
 
 ?>
+
+<h1>Projets Réalisés</h1>
+
 	<!-- partie 1 : projet avec ses détails-->
 	<article class="projet_container">
-		<div class="projet_container_flex">
-			<h1><?php the_title(); ?></h1>
+		<div class="container_info flex-item">
+			<h3><?php the_title(); ?></h3>
 				<ul class="list_info">
-					<li class="projet_git">Lien Git Hub:
+					<li class="projet_git"><span class="titre-info">Lien Git Hub:</span>
 						<?php
 							if($lienGit) {
-								echo $lienGit;
+								echo '<a class="lien-git" href="' . esc_url($lienGit) . '">' . $lienGit . '</a>';
 								} else {
 								echo ('Pas de correspondance');
 								}
 						?>
 					</li>
-					<li class="projet_description">Description:
+					<li class="projet_description"><span class="titre-info">Description:</span>
 					<?php
 							if($descriProjet) {
-								echo $descriProjet;
+								echo nl2br($descriProjet);
 								} else {
 								echo ('Pas de correspondance');
 								}
@@ -45,20 +48,17 @@ $descriProjet = get_field('description_projet');
 				</ul>
 		</div>
 
-		<div>
+		<div class="container_photo flex-item">
 			<?php if ($imgAccueil) {
 				$post_url = get_permalink($post->ID);
-								echo '<div class="projet_photo"> '; 
-									echo '<a href="' . esc_url($post_url) . '"><img src="' . wp_get_attachment_image_url( $imgAccueil, 'large' ) . '" alt="photo projet"></a>';
-										echo '<div class="overlay">';
-											echo '<img class="img_lightbox" src="' . get_template_directory_uri() . '/assets/images/lien_lightbox.png" alt="lien lightbox">';
-									echo '</a>';
-									
+								echo '<div class="projet_photo">'; 
+									echo '<a href="' . esc_url($post_url) . '"><img src="' . wp_get_attachment_image_url( $imgAccueil, 'large' ) . '" alt="photo projet"></a>';						
 								echo '</div>';
 							
 							}else {
 					echo ('Pas de correspondance');
-				} ?> 		
+				} 
+			?> 		
 		</div>
 	</article>
 		<!-- partie 2: -->
