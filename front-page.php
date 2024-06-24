@@ -61,7 +61,6 @@ if ($projets->have_posts()) {
                 echo '<div class="image-container">';
                     echo wp_get_attachment_image($imgAccueil, 'large');
                 
-            
                     echo '<div class="overlay">';
                         echo '<a href="' . esc_url($post_url) . '" class="link_publi">';
                             echo '<img class="img_publi" src="'.get_template_directory_uri().'/assets/images/lien_publi.png" alt="lien publication">';

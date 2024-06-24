@@ -10,6 +10,17 @@
     transform: translate(-50%, -50%) scale(1.9);
   }
 }
+@keyframes zoomImg {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .zone_hero {
   position: relative;
 }
@@ -26,6 +37,11 @@
   animation: zoomIn 3s linear forwards;
 }
 
+h2 {
+  text-align: center;
+  text-decoration: underline;
+}
+
 .projet-flex {
   display: flex;
   flex-wrap: wrap;
@@ -37,17 +53,21 @@
   width: calc(50% - 10px); /* Moitié de la largeur de la page moins un espace entre les colonnes */
   margin-bottom: 20px; /* Espacement entre les lignes */
   overflow: hidden;
-  height: 600px;
   position: relative;
   align-items: center;
+  align-content: start;
+  box-sizing: border-box;
 }
-.projet-flex .container-projet-accueil img {
-  width: calc(100% - 20px);
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+.projet-flex .container-projet-accueil .image-container {
+  height: 400px;
+  box-sizing: border-box;
+}
+.projet-flex .container-projet-accueil .image-container img {
+  max-height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  animation: zoomImg 3s linear forwards;
 }
 .projet-flex .container-projet-accueil:hover .overlay {
   opacity: 1;
@@ -65,14 +85,14 @@
   background-color: rgba(0, 0, 0, 0.8);
   opacity: 0;
   transition: opacity 0.8s ease-in-out;
-}
-.projet-flex .container-projet-accueil .title-container {
-  width: 100%;
-  bottom: -10px;
+  box-sizing: border-box;
 }
 .projet-flex .container-projet-accueil .title-container .photo_titre {
-  position: absolute;
+  max-width: 100%;
   bottom: 0px;
-  left: 10px;
   color: black;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }/*# sourceMappingURL=front-page.css.map */
