@@ -97,9 +97,6 @@ front_page
   0% {
     transform: translate(-50%, -50%) scale(0);
   }
-  50% {
-    transform: translate(-50%, -50%) scale(1);
-  }
   100% {
     transform: translate(-50%, -50%) scale(1.9);
   }
@@ -107,9 +104,6 @@ front_page
 @keyframes zoomImg {
   0% {
     transform: scale(0);
-  }
-  50% {
-    transform: scale(0.5);
   }
   100% {
     transform: scale(1);
@@ -128,7 +122,7 @@ front_page
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  animation: zoomIn 3s linear forwards;
+  animation: zoomIn 3s ease-out forwards;
 }
 
 h2 {
@@ -161,7 +155,8 @@ h2 {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-  animation: zoomImg 3s linear forwards;
+  animation: zoomImg 2s ease-out forwards;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
 }
 .projet-flex .container-projet-accueil:hover .overlay {
   opacity: 1;
@@ -176,7 +171,7 @@ h2 {
   justify-content: center;
   align-items: center;
   z-index: 2;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
   transition: opacity 0.8s ease-in-out;
   box-sizing: border-box;
@@ -186,6 +181,7 @@ h2 {
   bottom: 0px;
   color: black;
   font-size: 20px;
+  font-weight: 500;
   text-align: center;
   margin-top: 2%;
   margin-bottom: 2%;
@@ -297,6 +293,106 @@ h1 {
   left: -97px;
 }
 
+/*****************
+contact
+********************/
+/* Modal*/
+@keyframes zoomImg {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.modal {
+  display: none; /* caché par défaut */
+  position: fixed;
+  z-index: 5;
+  left: 0;
+  top: 0;
+  width: 100%; /* pleine largeur */
+  height: 100%; /* pleine hauteur */
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  animation: zoomImg 1.5s ease-out forwards;
+}
+.modal .modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: 15% auto;
+  box-sizing: border-box;
+  border: 5px solid #5ad27b;
+  border-radius: 10px;
+  width: 50%;
+}
+.modal .modal-content .close {
+  position: absolute;
+  right: 0;
+  padding: 2%;
+  font-size: 20px;
+  cursor: pointer;
+}
+.modal .modal-content .form-container h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 60px;
+  color: #5ad27b;
+}
+.modal .modal-content .form-container p {
+  display: flex;
+  justify-content: center;
+}
+.modal .modal-content .form-container .wpcf7-form-control {
+  border-radius: 10px;
+  border-color: #aaa;
+}
+.modal .modal-content .form-container .wpcf7-text {
+  width: 300px;
+  height: 50px;
+}
+.modal .modal-content .form-container .wpcf7-textarea {
+  width: 300px;
+  height: 150px;
+}
+.modal .modal-content .form-container input[type=submit] {
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  border-color: #5ad27b;
+  background-color: #5ad27b;
+  cursor: pointer;
+}
+.modal .modal-content .form-container input[type=submit]:hover {
+  opacity: 0.5;
+}
+.modal .modal-content .form-container .wpcf7-text, .modal .modal-content .form-container .wpcf7-textarea, .modal .modal-content .form-container input[type=submit] {
+  margin-bottom: 4%;
+}
+
+@media (max-width: 768px) {
+  .modal .modal-content {
+    width: 80%;
+  }
+  .modal .modal-content .mota-form-container p {
+    margin-top: 2%;
+  }
+  .modal .modal-content .mota-form-container .wpcf7-text {
+    width: 250px;
+    height: 50px;
+    margin-top: 2%;
+  }
+  .modal .modal-content .mota-form-container .wpcf7-textarea {
+    width: 250px;
+    height: 150px;
+    margin-top: 2%;
+  }
+  .modal .modal-content .mota-form-container input[type=submit] {
+    width: 250px;
+    height: 50px;
+    margin: 5% 0 5% 0;
+  }
+}
 /*****************
 footer
 ********************/

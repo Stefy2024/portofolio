@@ -1,46 +1,76 @@
 document.addEventListener('DOMContentLoaded', function () {
-// Sélectionnez l'élément à animer
+    //////////////////////////////////////////////////
+    //Contact
+
+// recupere la modal
+const modal = document.getElementById('myModal');
+// recupere l'élément "contact"
+const contact = document.getElementById("menu-item-47");
+// recupere l'élément span pour fermer (la croix)
+const span = document.getElementsByClassName("close")[0];
+
+// au click sur contact, on remplace display none par display block (ouvre le formulaire)
+contact.onclick = function() {
+    modal.style.display = "block";
+}
+
+// au click sur la croix, on ferme (display=none)
+span.onclick = function() {
+    modal.style.display = "none";
+}
+// au click hors du cadre du formulaire, on ferme (display=none)
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+//////////////////////////////////////////////////
+// Page Accueil- Sélectionne l'élément à animer
 const image = document.querySelector('.zone_hero h1');
 
-// Créez un nouvel observateur d'intersection
+// Créer un nouvel observateur d'intersection
 const observerTitre = new IntersectionObserver((entries) => {
-    // Pour chaque entrée...
+    // Pour chaque entrée
     entries.forEach((entry) => {
-        // Si l'élément est visible à l'écran...
+        // Si l'élément est visible à l'écran
         if (entry.isIntersecting) {
-            // Ajoutez la classe CSS qui déclenche l'animation
+            // déclenche l'animation
             image.style.animationPlayState = 'running';
         } else {
-            // Sinon, retirez la classe CSS
+            // Sinon, met en pause
             image.style.animationPlayState = 'paused';
         }
     });
 });
 
-// Commencez à observer l'élément
+// Commence à observer l'élément
 observerTitre.observe(image);
 
-    // Sélectionnez tous les éléments à animer
+    // Sélectionne tous les éléments à animer
     const images = document.querySelectorAll('.image-container img');
 
-    // Créez un nouvel observateur d'intersection
+    // Créer un nouvel observateur d'intersection
     const observerImg = new IntersectionObserver((entries) => {
         // Pour chaque entrée...
         entries.forEach((entry) => {
             // Si l'élément est visible à l'écran...
             if (entry.isIntersecting) {
-                // Ajoutez la classe CSS qui déclenche l'animation
+                //  déclenche l'animation
                 entry.target.style.animationPlayState = 'running';
             } else {
-                // Sinon, retirez la classe CSS
+                // Sinon, met l'animation en pause
                 entry.target.style.animationPlayState = 'paused';
             }
         });
     });
 
-    // Commencez à observer chaque élément
+    // Commence à observer chaque élément
     images.forEach((image) => {
         observerImg.observe(image);
     });
+
+
+
 });
 

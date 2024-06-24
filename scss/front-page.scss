@@ -3,9 +3,6 @@
     0% {
       transform: translate(-50%, -50%) scale(0); 
     }
-    50% {
-      transform: translate(-50%, -50%) scale(1); 
-    }
     100% {
       transform: translate(-50%, -50%) scale(1.9);
     }
@@ -15,9 +12,6 @@
   @keyframes zoomImg {
     0% {
       transform: scale(0); 
-    }
-    50% {
-      transform: scale(0.5); 
     }
     100% {
       transform: scale(1); 
@@ -41,7 +35,7 @@
       left: 50%; // Centre h1 horizontalement
       transform: translate(-50%, -50%); // Ajuste la position de h1 pour qu'il soit parfaitement centré
       color: white;
-      animation: zoomIn 3s linear forwards;
+      animation: zoomIn 3s ease-out forwards;
       
 
 
@@ -82,7 +76,8 @@
               max-height: 100%; 
               width: 100%; 
               object-fit: contain; 
-              animation: zoomImg 3s linear forwards;
+              animation: zoomImg 2s ease-out forwards;
+              box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
             }
           }
         &:hover {
@@ -101,7 +96,7 @@
             justify-content: center;
             align-items: center;
             z-index: 2;
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(0, 0, 0, 0.5);
             opacity: 0;
             transition: opacity 0.8s ease-in-out; 
             box-sizing: border-box;
@@ -114,6 +109,7 @@
               bottom: 0px;
               color: black; 
               font-size: 20px;
+              font-weight: 500;
               text-align: center;
               margin-top: 2%;
               margin-bottom: 2%;
