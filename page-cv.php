@@ -1,6 +1,6 @@
 <?php
 /*
- *  * Template Name: page modèle
+ *  * Template Name: page cv
  *
  */
 
@@ -11,6 +11,9 @@
 		 the_content();
 	 endwhile; 
  endif; 
- 
+
+?>
+
+ <?php
  get_footer();
  ?>

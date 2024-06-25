@@ -27,6 +27,7 @@ body{
         font-size:66px;
         font-style: italic;
         font-weight: 400;
+        color: #226c3b;
     }
     h3{
         font-size:18px;
@@ -63,6 +64,11 @@ single-projet
 contact
 ********************/
 @import 'scss/contact.scss';
+
+/*****************
+page
+********************/
+@import 'scss/page.scss';
 
 /*****************
 footer

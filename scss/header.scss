@@ -1,3 +1,10 @@
+/*animation logo-nom*/
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+
 
 .nav_bar{
     display: flex;
@@ -30,12 +37,30 @@
         right: 20px; // Position horizontale
     }
 
+.logo-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 
     .logo_img{
         width:160px;
         height: 160px;
+        animation: fadeIn 4s;
     }
 
+    .logo-nom{
+        font-size: 30px;
+        font-weight: 600;
+        color: #226c3b;
+       // text-align: start;
+        padding-left: 2%;
+        width: 200px;
+        opacity: 0;
+        animation: fadeIn 4s 1s forwards;
+      
+
+    }
+}
     #navigation{
 
         ul{

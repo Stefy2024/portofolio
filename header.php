@@ -16,9 +16,10 @@
 <body>
     
 <div class="nav_bar">
-
-        <a href="http://portofolio2.test/"> <img class="logo_img" src="<?php echo get_template_directory_uri(); ?>\assets\images\logo.jpg" alt="logo portofolio" /></a>
-
+        <div class="logo-container">
+            <a href="http://portofolio2.test/"> <img class="logo_img" src="<?php echo get_template_directory_uri(); ?>\assets\images\logo.jpg" alt="logo portofolio" /></a>
+            <div class="logo-nom">S. Doussot</div>
+        </div>
         <nav id="navigation">
             <?php wp_nav_menu(
                 array(

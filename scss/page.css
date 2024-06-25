@@ -1,0 +1,65 @@
+@charset "UTF-8";
+/*page confidentialité*/
+.titre-page {
+  color: #226c3b;
+}
+
+.soustitre-page {
+  margin-top: 3%;
+  margin-bottom: 3%;
+  text-decoration: underline;
+  color: #226c3b;
+}
+
+/*page CV*/
+.titre-cv {
+  margin: 3%;
+  color: #226c3b;
+}
+
+.separ-cv {
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.soustitre-cv {
+  margin-bottom: 2%;
+  font-size: 25px;
+  color: #226c3b;
+}
+
+.presentation {
+  line-height: 30px;
+  margin-top: 2%;
+}
+
+/*****partie compétence*******/
+.bloc-compet {
+  margin-bottom: 2%;
+}
+
+.soustitre-compet {
+  font-size: 20px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  text-decoration: underline;
+}
+
+.li-cv {
+  border: solid #226c3b;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px 0px rgba(34, 108, 59, 0.5);
+}
+
+/*****partie formartion et compétence*******/
+.bloc-form {
+  border: solid #226c3b;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px 0px rgba(34, 108, 59, 0.5);
+}
+.bloc-form p {
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 30px;
+}/*# sourceMappingURL=page.css.map */
