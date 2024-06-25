@@ -80,5 +80,71 @@
                         }
                 }
         }
+    }
 }
+
+
+// *******************Affichage mobile************************//
+
+
+@media (max-width: 768px) {
+ body{
+    
+ 
+
+    .nav_bar{
+        padding-right: 2%;
+        animation: fadeIn 2s;
+            .burger_menu {
+                display: block; // Affiche le bouton sur les petits écrans
+               
+            }
+
+            #navigation {
+                display: none; // Cache le menu de navigation
+                position: absolute;
+                flex-direction: column; // Pour afficher les éléments en colonne
+                align-items: center; // Pour centrer les éléments
+                justify-content: center;
+                width: 100%; // Pour occuper toute la largeur
+                background-color:#5ad27b;
+                z-index: 100;
+                top: 60px;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                overflow-y: auto;
+                animation: fadeIn 2s;
+				
+                
+                ul {
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%; // Pour occuper toute la largeur
+                    
+
+                        li{
+                            font-size: 44px;
+                            text-align: center;
+                            padding-bottom: 10%;
+                                a{
+                                color:#ffffff;
+                                padding-bottom: 10%;
+                                }
+                            }
+                    }
+            }
+            
+
+            // Lorsque .is-active est ajouté à #navigation, le menu s'affiche
+            #navigation.is-active {
+                display: flex;
+            }
+
+            #navigation.is-active + .close_icon {
+                display: block; // Affiche la croix lorsque le menu est actif
+            }
+    }
+}
+        
 }

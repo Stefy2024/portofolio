@@ -18,7 +18,7 @@ $image_choisie = $images[array_rand($images)];
 echo "<img src='$image_choisie' class='img_hero' alt='Image aléatoire' />";
 ?>
 
-<h1>Portofolio</h1>
+<h1>Portfolio</h1>
 </div>
 
 

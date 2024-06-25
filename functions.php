@@ -2,8 +2,8 @@
 <?php
 
 //ajout du fichier js
-add_action('wp_enqueue_scripts', 'enqueue_contact_Mota_scripts');
-function enqueue_contact_Mota_scripts() {
+add_action('wp_enqueue_scripts', 'enqueue_contact_scripts');
+function enqueue_contact_scripts() {
     wp_enqueue_script('jquery'); // Charge jQuery
     wp_enqueue_script('scripts', get_stylesheet_directory_uri() . '/js/scripts.js');
 }
