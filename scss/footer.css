@@ -16,11 +16,11 @@
   padding-right: 60px;
 }
 #navigation ul li a {
-  color: #5ad27b;
+  color: #226c3b;
   text-decoration: none;
 }
 #navigation ul li:hover a {
-  color: #226c3b;
+  color: #5ad27b;
 }
 #navigation .footer_text {
   font-style: normal;

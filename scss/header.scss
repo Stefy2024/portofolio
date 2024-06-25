@@ -43,9 +43,11 @@
     align-items: center;
 
     .logo_img{
-        width:160px;
-        height: 160px;
+        width:120px;
+        height: 120px;
         animation: fadeIn 4s;
+        border:solid transparent;
+        border-radius: 10px;
     }
 
     .logo-nom{
@@ -74,7 +76,7 @@
                     padding-right: 40px;
                     text-align: center;
                         a{
-                        color:#5ad27b;
+                        color:#226c3b;
                         text-decoration: none;
                         cursor: pointer;
                         }

@@ -40,9 +40,11 @@
   align-items: center;
 }
 .nav_bar .logo-container .logo_img {
-  width: 160px;
-  height: 160px;
+  width: 120px;
+  height: 120px;
   animation: fadeIn 4s;
+  border: solid transparent;
+  border-radius: 10px;
 }
 .nav_bar .logo-container .logo-nom {
   font-size: 30px;
@@ -65,7 +67,7 @@
   text-align: center;
 }
 .nav_bar #navigation ul li a {
-  color: #5ad27b;
+  color: #226c3b;
   text-decoration: none;
   cursor: pointer;
 }
